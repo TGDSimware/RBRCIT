@@ -299,7 +299,7 @@
             // 
             this.MenuUpdateAllExistingPhysics.Name = "MenuUpdateAllExistingPhysics";
             this.MenuUpdateAllExistingPhysics.Size = new System.Drawing.Size(214, 22);
-            this.MenuUpdateAllExistingPhysics.Text = "Update All Existing Physics";
+            this.MenuUpdateAllExistingPhysics.Text = Loc.String(56);
             this.MenuUpdateAllExistingPhysics.Click += new System.EventHandler(this.MenuUpdateAllExistingPhysics_Click);
             // 
             // toolStripMenuItem1
@@ -325,7 +325,7 @@
             // 
             // hyperlinkStyle1
             // 
-            /*cellStyle1.Font = null;
+            cellStyle1.Font = null;
             cellStyle1.FontStyle = System.Drawing.FontStyle.Underline;
             cellStyle1.ForeColor = System.Drawing.Color.Blue;
             this.hyperlinkStyle1.Normal = cellStyle1;
@@ -335,7 +335,7 @@
             this.hyperlinkStyle1.OverCursor = System.Windows.Forms.Cursors.Hand;
             cellStyle3.Font = null;
             cellStyle3.ForeColor = System.Drawing.Color.Blue;
-            this.hyperlinkStyle1.Visited = cellStyle3;*/
+            this.hyperlinkStyle1.Visited = cellStyle3;
             // 
             // statusStrip1
             // 
@@ -497,7 +497,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "All Cars:";
+            this.label1.Text = Loc.String(53);
             // 
             // olvAllCars
             // 
@@ -530,8 +530,8 @@
             this.olvAllCars.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.olvAllCars.FullRowSelect = true;
             this.olvAllCars.GridLines = true;
-            this.olvAllCars.GroupWithItemCountFormat = "{0} [{1} cars]";
-            this.olvAllCars.GroupWithItemCountSingularFormat = "{0} [{1} car]";
+            this.olvAllCars.GroupWithItemCountFormat = Loc.String(54);
+            this.olvAllCars.GroupWithItemCountSingularFormat = Loc.String(55);
             this.olvAllCars.HeaderMinimumHeight = 30;
             this.olvAllCars.HyperlinkStyle = this.hyperlinkStyle1;
             this.olvAllCars.Location = new System.Drawing.Point(15, 25);

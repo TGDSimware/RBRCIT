@@ -33,10 +33,10 @@ namespace RBRCIT
             tt.ReshowDelay = 0;
             tt.ToolTipIcon = ToolTipIcon.Warning;
             //tt.ToolTipTitle = "HELP";
-            string tooltiptext = "Copies the setups of the vehicle in Slot 5 to the 'school' subfolder of physics.rbz." + Environment.NewLine;
+            /*string tooltiptext = "Copies the setups of the vehicle in Slot 5 to the 'school' subfolder of physics.rbz." + Environment.NewLine;
             tooltiptext += "Enables to use Car #5 in the rally school." + Environment.NewLine;
-            tooltiptext += "" + Environment.NewLine;
-            tooltiptext += "However, this breaks compatibility with the Czech (RBRTM) plugin!" + Environment.NewLine;
+            tooltiptext += "" + Environment.NewLine;*/
+            string tooltiptext = Loc.String(81) + Environment.NewLine;
             tt.SetToolTip(cbReplaceShoolFiles, tooltiptext);
         }
 
@@ -77,9 +77,9 @@ namespace RBRCIT
 
         public void UpdateAllCars()
         {
-            toolStripStatusLabel1.Text = "Total Cars: " + rbrcit.AllCars.Count;
-            toolStripStatusLabel2.Text = "Models: " + rbrcit.ModelsFound;
-            toolStripStatusLabel3.Text = "Physics: " + rbrcit.PhysicsFound;
+            toolStripStatusLabel1.Text = string.Format(Loc.String(57), rbrcit.AllCars.Count);
+            toolStripStatusLabel2.Text = string.Format(Loc.String(58), rbrcit.ModelsFound);
+            toolStripStatusLabel3.Text = string.Format(Loc.String(60), rbrcit.PhysicsFound);
             toolStripStatusLabel4.Text = rbrcit.GetCarListVersion();
 
             //save collapsed state of groups to restore later
@@ -123,14 +123,14 @@ namespace RBRCIT
                 string version = rbrcit.GetPluginVersionNGP();
                 lblNGP.Text = version.Substring(0, version.IndexOf(' '));
                 lblNGPDate.Text = version.Substring(version.IndexOf(' '));
-                btNGP.Text = "Update";
+                btNGP.Text = Loc.String(47);
                 btNGPConfigure.Enabled = true;
             }
             else
             {
-                lblNGP.Text = "(not found)";
+                lblNGP.Text = Loc.String(60);
                 lblNGPDate.Text = "";
-                btNGP.Text = "Download";
+                btNGP.Text = Loc.String(26);
                 btNGPConfigure.Enabled = false;
             }
             if (rbrcit.PluginExistsFixUp())
@@ -138,14 +138,14 @@ namespace RBRCIT
                 string version = rbrcit.GetPluginVersionFixUp();
                 lblFixup.Text = version.Substring(0, version.IndexOf(' '));
                 lblFixUpDate.Text = version.Substring(version.IndexOf(' '));
-                btFixup.Text = "Update";
+                btFixup.Text = Loc.String(47);
                 btFixupConfigure.Enabled = true;
             }
             else
             {
-                lblFixup.Text = "(not found)";
+                lblFixup.Text = Loc.String(60);
                 lblFixUpDate.Text = "";
-                btFixup.Text = "Download";
+                btFixup.Text = Loc.String(26);
                 btFixupConfigure.Enabled = false;
             }
             
@@ -222,12 +222,12 @@ namespace RBRCIT
                 {
                     e.SubItem.Font = BoldFont;
                     e.SubItem.ForeColor = Green;
-                    e.SubItem.Text = "found";
+                    e.SubItem.Text = Loc.String(61);
                     e.SubItem.Url = null;
                 }
                 else
                 {
-                    e.SubItem.Text = "download";
+                    e.SubItem.Text = Loc.String(62);
                     if (e.Column == colModel)
                         if (c.link_model != null) e.SubItem.Url = c.link_model;
                         else e.SubItem.Url = "http://www.ly-racing.de/viewtopic.php?t=7878";
@@ -291,13 +291,13 @@ namespace RBRCIT
             if (e.Column == colModel || e.Column == colPhysics) return;
             Car c = (Car)e.Model;
             e.Title = c.manufacturer + " " + c.name;
-            e.Text = "Category: " + c.cat;
-            e.Text += "\nTrans: " + c.trans;
-            e.Text += "\nYear: " + c.year;
-            e.Text += "\nPower: " + c.power + " HP";
-            e.Text += "\nWeight: " + c.weight + " kg";
-            e.Text += "\n\nModel Folder: " + c.folder;
-            e.Text += "\nPhysics Folder: " + c.physics;
+            e.Text = string.Format(Loc.String(63), c.cat);
+            e.Text += string.Format(Loc.String(64), c.trans);
+            e.Text += string.Format(Loc.String(65), c.year);
+            e.Text += string.Format(Loc.String(66), c.power);
+            e.Text += string.Format(Loc.String(67), c.weight);
+            e.Text += string.Format(Loc.String(68), c.folder);
+            e.Text += string.Format(Loc.String(69), c.physics);
         }
 
         private void olvAllCars_CellRightClick(object sender, CellRightClickEventArgs e)
@@ -363,7 +363,7 @@ namespace RBRCIT
 
                 if (c.nr == null)
                 {
-                    MessageBox.Show("This car is not known in the carList.ini.\nTherefore you cannot change anything on it.");
+                    MessageBox.Show(Loc.String(70));
                     return;
                 }
 
@@ -392,20 +392,18 @@ namespace RBRCIT
             {
                 if (!rbrcit.UseAudio)
                 {
-                    MessageBox.Show("Changing engine sounds is disabled. Please extract the " +
-                        "audio.dat file using the menu 'Tools' -> 'Extract audio.dat'.");
+                    MessageBox.Show(Loc.String(71));
                     return;
                 }
                 Car c = (Car)e.Model;
                 if (c.nr == null)
                 {
-                    MessageBox.Show("This car is not known in the carList.ini." +
-                        "\nTherefore you cannot change anything on it.");
+                    MessageBox.Show(Loc.String(72));
                     return;
                 }
                 OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Title = "Choose engine sound for: " + c.manufacturer + " " + c.name;
-                ofd.Filter = "Engine files(*.eng) | *.eng";
+                ofd.Title = string.Format(Loc.String(73), c.manufacturer, c.name);
+                ofd.Filter = Loc.String(74);
                 ofd.InitialDirectory = Application.StartupPath + "\\Audio\\Cars";
                 if (ofd.ShowDialog(this) == DialogResult.OK)
                 {
@@ -460,14 +458,13 @@ namespace RBRCIT
             btApply.Enabled = false;
             rbrcit.ApplyChanges(cbReplaceShoolFiles.Checked, false);
             UpdateApplyButton();
-            MessageBox.Show("Cars have been installed.");
+            MessageBox.Show(Loc.String(75));
         }
         private void btStartGame(object sender, EventArgs e)
         {
             if (btApply.Enabled)
             {
-                DialogResult dr = MessageBox.Show("There are changed cars that have not been applied to the game yet. " +
-                    "Are you sure you want to start the game?", "Sure to start?", MessageBoxButtons.YesNo);
+                DialogResult dr = MessageBox.Show(Loc.String(76), Loc.String(77), MessageBoxButtons.YesNo);
                 if (dr == DialogResult.No) return;
             }
 
@@ -582,7 +579,7 @@ namespace RBRCIT
         private void MenuRestoreOriginalRBRCars_Click(object sender, EventArgs e)
         {
             rbrcit.RestoreOriginalRBRCars();
-            MessageBox.Show("Original cars restored.");
+            MessageBox.Show(Loc.String(78));
         }
 
         private void MenuManageSavedCarLists_Click(object sender, EventArgs e)
@@ -604,13 +601,13 @@ namespace RBRCIT
         private void MenuBackup_Click(object sender, EventArgs e)
         {
             rbrcit.Backup();
-            MessageBox.Show("Backup created.");
+            MessageBox.Show(Loc.String(79));
         }
 
         private void MenuRestore_Click(object sender, EventArgs e)
         {
             rbrcit.Restore();
-            MessageBox.Show("Backup resttored.");
+            MessageBox.Show(Loc.String(80));
         }
 
         private void MenuAbout_Click(object sender, EventArgs e)
