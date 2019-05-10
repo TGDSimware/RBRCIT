@@ -41,7 +41,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "List Name";
+            this.label1.Text = Loc.String(92);
             // 
             // textBox1
             // 
@@ -58,7 +58,7 @@
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 2;
-            this.btSave.Text = "Save";
+            this.btSave.Text = Loc.String(90);
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
@@ -69,7 +69,7 @@
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 2;
-            this.btCancel.Text = "Cancel";
+            this.btCancel.Text = Loc.String(89);
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
@@ -87,7 +87,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormSaveList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Save List";
+            this.Text = Loc.String(49);
             this.ResumeLayout(false);
             this.PerformLayout();
 

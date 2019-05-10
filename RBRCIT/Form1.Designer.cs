@@ -591,7 +591,7 @@
             // colHP
             // 
             this.colHP.AspectName = "power";
-            this.colHP.AspectToStringFormat = "{0} HP";
+            this.colHP.AspectToStringFormat = Loc.String(70);
             this.colHP.Text = Loc.String(39);
             this.colHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -968,7 +968,7 @@
             // 
             this.col2Sound.AspectName = "userSettings.engineSound";
             this.col2Sound.FillsFreeSpace = true;
-            this.col2Sound.Text = "Sound";
+            this.col2Sound.Text = Loc.String(91);
             // 
             // col2Settings
             // 

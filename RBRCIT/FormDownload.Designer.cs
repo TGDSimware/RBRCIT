@@ -57,7 +57,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Cancel";
+            this.button1.Text = Loc.String(89);
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -80,7 +80,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormDownload";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Downloading...";
+            this.Text = Loc.String(93);
             this.ResumeLayout(false);
             this.PerformLayout();
 

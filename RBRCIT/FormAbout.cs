@@ -18,6 +18,7 @@ namespace RBRCIT
             label1.Text = "RBRCIT - RichardBurnsRally Car Installation Tool" + Environment.NewLine;
             label1.Text += "Version: " + v + Environment.NewLine;
             label1.Text += "(c) 2017 by zissakos " + Environment.NewLine;
+            label1.Text += "international edition by TGDSimware" + Environment.NewLine;
         }
 
         private void label1_Click(object sender, EventArgs e)

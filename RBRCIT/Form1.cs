@@ -79,7 +79,7 @@ namespace RBRCIT
         {
             toolStripStatusLabel1.Text = string.Format(Loc.String(57), rbrcit.AllCars.Count);
             toolStripStatusLabel2.Text = string.Format(Loc.String(58), rbrcit.ModelsFound);
-            toolStripStatusLabel3.Text = string.Format(Loc.String(60), rbrcit.PhysicsFound);
+            toolStripStatusLabel3.Text = string.Format(Loc.String(59), rbrcit.PhysicsFound);
             toolStripStatusLabel4.Text = rbrcit.GetCarListVersion();
 
             //save collapsed state of groups to restore later
@@ -292,12 +292,12 @@ namespace RBRCIT
             Car c = (Car)e.Model;
             e.Title = c.manufacturer + " " + c.name;
             e.Text = string.Format(Loc.String(63), c.cat);
-            e.Text += string.Format(Loc.String(64), c.trans);
-            e.Text += string.Format(Loc.String(65), c.year);
-            e.Text += string.Format(Loc.String(66), c.power);
-            e.Text += string.Format(Loc.String(67), c.weight);
-            e.Text += string.Format(Loc.String(68), c.folder);
-            e.Text += string.Format(Loc.String(69), c.physics);
+            e.Text += "\n" + string.Format(Loc.String(64), c.trans);
+            e.Text += "\n" + string.Format(Loc.String(65), c.year);
+            e.Text += "\n" + string.Format(Loc.String(66), c.power);
+            e.Text += "\n" + string.Format(Loc.String(67), c.weight);
+            e.Text += "\n\n" + string.Format(Loc.String(68), c.folder);
+            e.Text += "\n" + string.Format(Loc.String(69), c.physics);
         }
 
         private void olvAllCars_CellRightClick(object sender, CellRightClickEventArgs e)
@@ -363,7 +363,7 @@ namespace RBRCIT
 
                 if (c.nr == null)
                 {
-                    MessageBox.Show(Loc.String(70));
+                    MessageBox.Show(Loc.String(72));
                     return;
                 }
 

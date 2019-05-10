@@ -50,7 +50,7 @@
             this.cbHideWindShield.Name = "cbHideWindShield";
             this.cbHideWindShield.Size = new System.Drawing.Size(103, 17);
             this.cbHideWindShield.TabIndex = 2;
-            this.cbHideWindShield.Text = "Hide Windshield";
+            this.cbHideWindShield.Text = Loc.String(87);
             this.cbHideWindShield.UseVisualStyleBackColor = true;
             // 
             // cbHideWipers
@@ -60,7 +60,7 @@
             this.cbHideWipers.Name = "cbHideWipers";
             this.cbHideWipers.Size = new System.Drawing.Size(84, 17);
             this.cbHideWipers.TabIndex = 1;
-            this.cbHideWipers.Text = "Hide Wipers";
+            this.cbHideWipers.Text = Loc.String(86);
             this.cbHideWipers.UseVisualStyleBackColor = true;
             // 
             // cbHideSteeringWheel
@@ -70,7 +70,7 @@
             this.cbHideSteeringWheel.Name = "cbHideSteeringWheel";
             this.cbHideSteeringWheel.Size = new System.Drawing.Size(124, 17);
             this.cbHideSteeringWheel.TabIndex = 0;
-            this.cbHideSteeringWheel.Text = "Hide Steering Wheel";
+            this.cbHideSteeringWheel.Text = Loc.String(85);
             this.cbHideSteeringWheel.UseVisualStyleBackColor = true;
             // 
             // btSave
@@ -80,7 +80,7 @@
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 1;
-            this.btSave.Text = "Save";
+            this.btSave.Text = Loc.String(90);
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
@@ -92,7 +92,7 @@
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 1;
-            this.btCancel.Text = "Cancel";
+            this.btCancel.Text = Loc.String(89);
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
@@ -107,7 +107,7 @@
             this.groupBox1.Size = new System.Drawing.Size(243, 311);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Engine Sound";
+            this.groupBox1.Text = Loc.String(91);
             // 
             // listBox1
             // 
@@ -120,9 +120,9 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(89, 26);
+            this.textBox1.Location = new System.Drawing.Point(109, 26);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 2;
             // 
             // radioButton2
@@ -133,7 +133,7 @@
             this.radioButton2.Size = new System.Drawing.Size(116, 17);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Use custom sound:";
+            this.radioButton2.Text = Loc.String(84);
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -145,7 +145,7 @@
             this.radioButton1.Size = new System.Drawing.Size(85, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Use default: ";
+            this.radioButton1.Text = Loc.String(82);
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -158,7 +158,7 @@
             this.groupBox2.Size = new System.Drawing.Size(162, 111);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Hide Parts";
+            this.groupBox2.Text = Loc.String(83);
             // 
             // FormCarSettings
             // 
@@ -174,7 +174,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormCarSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Car Settings";
+            this.Text = Loc.String(88);
             this.Load += new System.EventHandler(this.FormCarSettings_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

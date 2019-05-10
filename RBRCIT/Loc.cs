@@ -32,7 +32,9 @@ namespace RBRCIT
                 try
                 {
                     s = ini.GetParameterValue(i.ToString(), "strings");
-                    if (s != null) _strings.Add(i, s); else break;
+                    if (s != null) _strings.Add(i, s.Replace("\\n", "\n"));
+                    else
+                        break;
                 }
                 catch
                 {
