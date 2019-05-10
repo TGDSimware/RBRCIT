@@ -96,6 +96,7 @@
     <Compile Include="HelperFunctions.cs" />
     <Compile Include="INIFile.cs" />
     <Compile Include="IniFileHelper.cs" />
+    <Compile Include="Loc.cs" />
     <Compile Include="MenuButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -145,6 +146,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="rbrcit_en.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="rbrcit_it.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="RBRCIT.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

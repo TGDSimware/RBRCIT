@@ -57,7 +57,7 @@ namespace RBRCIT
 
         public void Load()
         {
-            rbrcit_ini = new INIFile("RBRCIT.ini");
+            rbrcit_ini = Program.RBRcitIni;
 
             UseExternalUnzipper = false;
             PathToExternalUnzipper = rbrcit_ini.GetParameterValue("external_unzipper", "ArchiveHandling");
@@ -105,8 +105,7 @@ namespace RBRCIT
         {
             if (!Directory.Exists("RBRCIT\\backup"))
             {
-                DialogResult dr = MessageBox.Show("A backup was not found. It is recommended to backup the files affected by this tool " +
-                    "before any activity. Do you want to backup now?", "Backup?", MessageBoxButtons.YesNo);
+                DialogResult dr = MessageBox.Show(Loc.String(1), Loc.String(0), MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                     Backup();
             }
@@ -115,16 +114,14 @@ namespace RBRCIT
 
             if (!File.Exists("RBRCIT\\carlist\\carList.ini"))
             {
-                DialogResult dr = MessageBox.Show("There is no carList.ini file. It will now be downloaded.", "Download carList.ini?", MessageBoxButtons.OKCancel);
+                DialogResult dr = MessageBox.Show(Loc.String(3), Loc.String(2) , MessageBoxButtons.OKCancel);
                 if (dr == DialogResult.OK)
                     DownloadCarListINI();
             }
 
             if (!UseAudio)
             {
-                DialogResult dr = MessageBox.Show("Audio subfolder not found.\nIn order to use different engine sounds, the " +
-                    "file audio.dat needs to be extracted.\nDo this now (takes 10-20s)?\n\n(You can do " +
-                    "this later anytime via 'Tools' -> 'Extract audio.dat'.)", "Extract audio.dat?", MessageBoxButtons.YesNo);
+                DialogResult dr = MessageBox.Show(Loc.String(5), Loc.String(4), MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                     ExtractAudioDAT();
             }
@@ -197,8 +194,7 @@ namespace RBRCIT
             string pathToCarsINI = "Cars\\Cars.ini";
             if (!File.Exists(pathToCarsINI))
             {
-                MessageBox.Show(pathToCarsINI + " could not be found. Please make sure you start this tool " +
-                    "from your RBR installation folder and that there is a Cars.ini file in \\Cars. Exiting.");
+                MessageBox.Show(string.Format(Loc.String(6), pathToCarsINI));
                 Environment.Exit(-1);
                 return;
             }
@@ -273,12 +269,12 @@ namespace RBRCIT
         {
             if (DesiredCarList[slot].nr == c.nr)
             {
-                MessageBox.Show("This car is already at the desired car slot.");
+                MessageBox.Show(Loc.String(7));
                 return false;
             }
             if (!c.model_exists || !c.physics_exists)
             {
-                MessageBox.Show("You can only add cars to the slots that have both model and physics.");
+                MessageBox.Show(Loc.String(8));
                 return false;
             }
             DesiredCarList[slot] = c;
@@ -586,7 +582,7 @@ namespace RBRCIT
             }
             if (jobs.Count == 0)
             {
-                MessageBox.Show("No missing physics. All physics are there.");
+                MessageBox.Show(Loc.String(9));
                 return;
             }
             FormDownload fd = new FormDownload(jobs, this);
@@ -610,7 +606,7 @@ namespace RBRCIT
             }
             if (jobs.Count == 0)
             {
-                MessageBox.Show("No existing physics. Download Physics first.");
+                MessageBox.Show(Loc.String(10));
                 return;
             }
             FormDownload fd = new FormDownload(jobs, this);
@@ -707,7 +703,7 @@ namespace RBRCIT
         {
             if (!File.Exists("audio.dat"))
             {
-                MessageBox.Show("The file audio.dat was not found. Aborting.");
+                MessageBox.Show(Loc.String(11));
                 return;
             }
 
@@ -724,7 +720,7 @@ namespace RBRCIT
             Directory.Delete("audio.dat.extracted", true);
             File.Move("audio.dat", "audio.dat.old");
 
-            MessageBox.Show("The file 'audio.dat' has been extracted into the new subfolder 'Audio' and renamed to 'audio.dat.old'. Now you can change engine sounds!");
+            MessageBox.Show(Loc.String(12));
 
             UseAudio = Directory.Exists("Audio") && !File.Exists("audio.dat");
         }
@@ -733,10 +729,7 @@ namespace RBRCIT
         {
             if (!Directory.Exists("Physics") && !File.Exists("physics.rbz"))
             {
-                DialogResult dr = MessageBox.Show("Neither the file 'physics.rbz' nor the subfolder 'Physics' could be found." +
-                    "\nPlease start this tool from inside an RBR folder." +
-                    "\nIf this is already the case, please restore 'physics.rbz'." +
-                    "\n\nAlternatively, the NGP plugin could be downloaded now to rectify the situation. Download now?", "", MessageBoxButtons.OKCancel);
+                DialogResult dr = MessageBox.Show(Loc.String(13), "", MessageBoxButtons.OKCancel);
                 if (dr == DialogResult.OK)
                     DownloadPluginNGP();
                 else

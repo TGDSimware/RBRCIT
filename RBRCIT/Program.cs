@@ -9,6 +9,8 @@ namespace RBRCIT
 {
     static class Program
     {
+        public static INIFile RBRcitIni { get; internal set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,9 +24,14 @@ namespace RBRCIT
             
             try
             {
+                RBRcitIni = new INIFile("RBRCIT.ini");
+                string languageFilePath = RBRcitIni.GetParameterValue("languageFile", "RBRCIT");
+                Loc.Load(languageFilePath);
+
                 Form1 f = new Form1();
                 Application.Run(f);
                 //Application.Run(new Form1());
+                
             }
             catch (Exception e)
             {

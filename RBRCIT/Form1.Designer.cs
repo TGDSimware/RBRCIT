@@ -149,14 +149,14 @@
             // 
             this.collapseAllGroupsToolStripMenuItem.Name = "collapseAllGroupsToolStripMenuItem";
             this.collapseAllGroupsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.collapseAllGroupsToolStripMenuItem.Text = "Collapse All Groups";
+            this.collapseAllGroupsToolStripMenuItem.Text = Loc.String(14);
             this.collapseAllGroupsToolStripMenuItem.Click += new System.EventHandler(this.collapseAllGroupsToolStripMenuItem_Click);
             // 
             // uncollapseAllGroupsToolStripMenuItem
             // 
             this.uncollapseAllGroupsToolStripMenuItem.Name = "uncollapseAllGroupsToolStripMenuItem";
             this.uncollapseAllGroupsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.uncollapseAllGroupsToolStripMenuItem.Text = "Uncollapse All Groups";
+            this.uncollapseAllGroupsToolStripMenuItem.Text = Loc.String(15);
             this.uncollapseAllGroupsToolStripMenuItem.Click += new System.EventHandler(this.uncollapseAllGroupsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -170,7 +170,7 @@
             this.showGroupsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showGroupsToolStripMenuItem.Name = "showGroupsToolStripMenuItem";
             this.showGroupsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.showGroupsToolStripMenuItem.Text = "Show Groups";
+            this.showGroupsToolStripMenuItem.Text = Loc.String(16);
             this.showGroupsToolStripMenuItem.Click += new System.EventHandler(this.showGroupsToolStripMenuItem_Click);
             // 
             // menuStrip1
@@ -194,13 +194,13 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Text = Loc.String(17);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Text = Loc.String(18);
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.MenuExit_Click);
             // 
             // viewToolStripMenuItem
@@ -209,14 +209,14 @@
             this.MenuReload});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Text = Loc.String(19);
             // 
             // MenuReload
             // 
             this.MenuReload.Name = "MenuReload";
             this.MenuReload.ShortcutKeys = System.Windows.Forms.Keys.F5;
             this.MenuReload.Size = new System.Drawing.Size(129, 22);
-            this.MenuReload.Text = "Reload";
+            this.MenuReload.Text = Loc.String(20);
             this.MenuReload.Click += new System.EventHandler(this.MenuReload_Click);
             // 
             // toolsToolStripMenuItem
@@ -230,14 +230,14 @@
             this.MenuRestore});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
+            this.toolsToolStripMenuItem.Text = Loc.String(21);
             this.toolsToolStripMenuItem.DropDownOpening += new System.EventHandler(this.toolsToolStripMenuItem_DropDownOpening);
             // 
             // MenuExtractAudioDat
             // 
             this.MenuExtractAudioDat.Name = "MenuExtractAudioDat";
             this.MenuExtractAudioDat.Size = new System.Drawing.Size(208, 22);
-            this.MenuExtractAudioDat.Text = "Extract audio.dat";
+            this.MenuExtractAudioDat.Text = Loc.String(22);
             this.MenuExtractAudioDat.Click += new System.EventHandler(this.MenuExtractAudioDat_Click);
             // 
             // toolStripSeparator4
@@ -249,7 +249,7 @@
             // 
             this.MenuRestoreOriginalRBRCars.Name = "MenuRestoreOriginalRBRCars";
             this.MenuRestoreOriginalRBRCars.Size = new System.Drawing.Size(208, 22);
-            this.MenuRestoreOriginalRBRCars.Text = "Restore Original RBR Cars";
+            this.MenuRestoreOriginalRBRCars.Text = Loc.String(23);
             this.MenuRestoreOriginalRBRCars.Click += new System.EventHandler(this.MenuRestoreOriginalRBRCars_Click);
             // 
             // toolStripSeparator2
@@ -261,14 +261,14 @@
             // 
             this.MenuBackup.Name = "MenuBackup";
             this.MenuBackup.Size = new System.Drawing.Size(208, 22);
-            this.MenuBackup.Text = "Backup";
+            this.MenuBackup.Text = Loc.String(24);
             this.MenuBackup.Click += new System.EventHandler(this.MenuBackup_Click);
             // 
             // MenuRestore
             // 
             this.MenuRestore.Name = "MenuRestore";
             this.MenuRestore.Size = new System.Drawing.Size(208, 22);
-            this.MenuRestore.Text = "Restore";
+            this.MenuRestore.Text = Loc.String(25);
             this.MenuRestore.Click += new System.EventHandler(this.MenuRestore_Click);
             // 
             // downloadToolStripMenuItem
@@ -279,20 +279,20 @@
             this.MenuUpdateAllExistingPhysics});
             this.downloadToolStripMenuItem.Name = "downloadToolStripMenuItem";
             this.downloadToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.downloadToolStripMenuItem.Text = "Download";
+            this.downloadToolStripMenuItem.Text = Loc.String(26);
             // 
             // MenuUpdateCarList
             // 
             this.MenuUpdateCarList.Name = "MenuUpdateCarList";
             this.MenuUpdateCarList.Size = new System.Drawing.Size(214, 22);
-            this.MenuUpdateCarList.Text = "Update carList.ini";
+            this.MenuUpdateCarList.Text = Loc.String(27);
             this.MenuUpdateCarList.Click += new System.EventHandler(this.MenuUpdateCarList_Click);
             // 
             // MenuDownloadMissingPhysics
             // 
             this.MenuDownloadMissingPhysics.Name = "MenuDownloadMissingPhysics";
             this.MenuDownloadMissingPhysics.Size = new System.Drawing.Size(214, 22);
-            this.MenuDownloadMissingPhysics.Text = "Download Missing Physics";
+            this.MenuDownloadMissingPhysics.Text = Loc.String(28);
             this.MenuDownloadMissingPhysics.Click += new System.EventHandler(this.MenuDownloadMissingPhysics_Click);
             // 
             // MenuUpdateAllExistingPhysics
@@ -314,7 +314,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Text = Loc.String(30);
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.MenuAbout_Click);
             // 
             // imageList24
@@ -325,7 +325,7 @@
             // 
             // hyperlinkStyle1
             // 
-            cellStyle1.Font = null;
+            /*cellStyle1.Font = null;
             cellStyle1.FontStyle = System.Drawing.FontStyle.Underline;
             cellStyle1.ForeColor = System.Drawing.Color.Blue;
             this.hyperlinkStyle1.Normal = cellStyle1;
@@ -335,7 +335,7 @@
             this.hyperlinkStyle1.OverCursor = System.Windows.Forms.Cursors.Hand;
             cellStyle3.Font = null;
             cellStyle3.ForeColor = System.Drawing.Color.Blue;
-            this.hyperlinkStyle1.Visited = cellStyle3;
+            this.hyperlinkStyle1.Visited = cellStyle3;*/
             // 
             // statusStrip1
             // 
@@ -428,7 +428,7 @@
             // 
             this.MenuManageSavedCarLists.Name = "MenuManageSavedCarLists";
             this.MenuManageSavedCarLists.Size = new System.Drawing.Size(198, 22);
-            this.MenuManageSavedCarLists.Text = "Manage Saved Car Lists";
+            this.MenuManageSavedCarLists.Text =Loc.String(31);
             this.MenuManageSavedCarLists.Click += new System.EventHandler(this.MenuManageSavedCarLists_Click);
             // 
             // contextMenuStripCar
@@ -443,14 +443,14 @@
             // 
             this.updateModelToolStripMenuItem.Name = "updateModelToolStripMenuItem";
             this.updateModelToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.updateModelToolStripMenuItem.Text = "Update Model";
+            this.updateModelToolStripMenuItem.Text = Loc.String(32);
             this.updateModelToolStripMenuItem.Click += new System.EventHandler(this.updateModelToolStripMenuItem_Click);
             // 
             // updatePhysicsToolStripMenuItem
             // 
             this.updatePhysicsToolStripMenuItem.Name = "updatePhysicsToolStripMenuItem";
             this.updatePhysicsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.updatePhysicsToolStripMenuItem.Text = "Update Physics";
+            this.updatePhysicsToolStripMenuItem.Text = Loc.String(33);
             this.updatePhysicsToolStripMenuItem.Click += new System.EventHandler(this.updatePhysicsToolStripMenuItem_Click);
             // 
             // mySplitContainer1
@@ -561,38 +561,38 @@
             // colCategory
             // 
             this.colCategory.AspectName = "cat";
-            this.colCategory.Text = "Category";
+            this.colCategory.Text = Loc.String(34);
             this.colCategory.Width = 80;
             // 
             // colManufacturer
             // 
             this.colManufacturer.AspectName = "manufacturer";
-            this.colManufacturer.Text = "Manufacturer";
+            this.colManufacturer.Text = Loc.String(35);
             this.colManufacturer.Width = 109;
             // 
             // colName
             // 
             this.colName.AspectName = "name";
-            this.colName.Text = "Name";
+            this.colName.Text = Loc.String(36);
             this.colName.Width = 25;
             // 
             // colTrans
             // 
             this.colTrans.AspectName = "trans";
-            this.colTrans.Text = "Trans";
+            this.colTrans.Text = Loc.String(37);
             this.colTrans.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // colYear
             // 
             this.colYear.AspectName = "year";
-            this.colYear.Text = "Year";
+            this.colYear.Text = Loc.String(38);
             this.colYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // colHP
             // 
             this.colHP.AspectName = "power";
             this.colHP.AspectToStringFormat = "{0} HP";
-            this.colHP.Text = "Power";
+            this.colHP.Text = Loc.String(39);
             this.colHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // colWeight
@@ -600,14 +600,14 @@
             this.colWeight.AspectName = "weight";
             this.colWeight.AspectToStringFormat = "{0} kg";
             this.colWeight.MinimumWidth = 60;
-            this.colWeight.Text = "Weight";
+            this.colWeight.Text = Loc.String(40);
             this.colWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // colModel
             // 
             this.colModel.AspectName = "model_exists";
             this.colModel.Hyperlink = true;
-            this.colModel.Text = "Model";
+            this.colModel.Text = Loc.String(41);
             this.colModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colModel.Width = 65;
             // 
@@ -615,7 +615,7 @@
             // 
             this.colPhysics.AspectName = "physics_exists";
             this.colPhysics.Hyperlink = true;
-            this.colPhysics.Text = "Physics";
+            this.colPhysics.Text = Loc.String(42);
             this.colPhysics.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colPhysics.Width = 65;
             // 
@@ -649,7 +649,7 @@
             this.cbReplaceShoolFiles.Name = "cbReplaceShoolFiles";
             this.cbReplaceShoolFiles.Size = new System.Drawing.Size(178, 17);
             this.cbReplaceShoolFiles.TabIndex = 13;
-            this.cbReplaceShoolFiles.Text = "Replace School Car files (Slot 5)";
+            this.cbReplaceShoolFiles.Text = Loc.String(43);
             this.cbReplaceShoolFiles.UseVisualStyleBackColor = true;
             // 
             // label12
@@ -731,7 +731,7 @@
             this.btLoadList.Name = "btLoadList";
             this.btLoadList.Size = new System.Drawing.Size(79, 30);
             this.btLoadList.TabIndex = 11;
-            this.btLoadList.Text = "Load List";
+            this.btLoadList.Text = Loc.String(44);
             this.btLoadList.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -753,7 +753,7 @@
             this.groupBox1.Size = new System.Drawing.Size(502, 94);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Plugins";
+            this.groupBox1.Text = Loc.String(45);
             // 
             // btFixupConfigure
             // 
@@ -762,7 +762,7 @@
             this.btFixupConfigure.Name = "btFixupConfigure";
             this.btFixupConfigure.Size = new System.Drawing.Size(80, 23);
             this.btFixupConfigure.TabIndex = 3;
-            this.btFixupConfigure.Text = "Configure";
+            this.btFixupConfigure.Text = Loc.String(46);
             this.btFixupConfigure.UseVisualStyleBackColor = true;
             this.btFixupConfigure.Click += new System.EventHandler(this.btFixupConfigure_Click);
             // 
@@ -773,7 +773,7 @@
             this.btFixup.Name = "btFixup";
             this.btFixup.Size = new System.Drawing.Size(91, 23);
             this.btFixup.TabIndex = 3;
-            this.btFixup.Text = "Update";
+            this.btFixup.Text = Loc.String(47);
             this.btFixup.UseVisualStyleBackColor = true;
             this.btFixup.Click += new System.EventHandler(this.btFixupDownload_Click);
             // 
@@ -784,7 +784,7 @@
             this.btNGPConfigure.Name = "btNGPConfigure";
             this.btNGPConfigure.Size = new System.Drawing.Size(80, 23);
             this.btNGPConfigure.TabIndex = 2;
-            this.btNGPConfigure.Text = "Configure";
+            this.btNGPConfigure.Text = Loc.String(46);
             this.btNGPConfigure.UseVisualStyleBackColor = true;
             this.btNGPConfigure.Click += new System.EventHandler(this.btNGPConfigure_Click);
             // 
@@ -795,7 +795,7 @@
             this.btNGP.Name = "btNGP";
             this.btNGP.Size = new System.Drawing.Size(91, 23);
             this.btNGP.TabIndex = 2;
-            this.btNGP.Text = "Update";
+            this.btNGP.Text = Loc.String(47);
             this.btNGP.UseVisualStyleBackColor = true;
             this.btNGP.Click += new System.EventHandler(this.btNGPDownload_Click);
             // 
@@ -860,7 +860,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Installed Cars:";
+            this.label2.Text = Loc.String(48);
             // 
             // btSaveList
             // 
@@ -868,7 +868,7 @@
             this.btSaveList.Name = "btSaveList";
             this.btSaveList.Size = new System.Drawing.Size(79, 30);
             this.btSaveList.TabIndex = 7;
-            this.btSaveList.Text = "Save List";
+            this.btSaveList.Text = Loc.String(49);
             this.btSaveList.UseVisualStyleBackColor = true;
             this.btSaveList.Click += new System.EventHandler(this.btSaveList_Click);
             // 
@@ -947,23 +947,23 @@
             // col2Category
             // 
             this.col2Category.AspectName = "cat";
-            this.col2Category.Text = "Category";
+            this.col2Category.Text = Loc.String(34);
             // 
             // col2Manufacturer
             // 
             this.col2Manufacturer.AspectName = "manufacturer";
-            this.col2Manufacturer.Text = "Manufacturer";
+            this.col2Manufacturer.Text = Loc.String(35);
             // 
             // col2Name
             // 
             this.col2Name.AspectName = "name";
-            this.col2Name.Text = "Name";
+            this.col2Name.Text = Loc.String(36);
             // 
             // col2Trans
             // 
             this.col2Trans.AspectName = "trans";
-            this.col2Trans.Text = "Trans";
-            // 
+            this.col2Trans.Text = Loc.String(37);
+
             // col2Sound
             // 
             this.col2Sound.AspectName = "userSettings.engineSound";
@@ -997,7 +997,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 37);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Start Game";
+            this.button1.Text = Loc.String(51);
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btStartGame);
             // 
@@ -1008,7 +1008,7 @@
             this.btApply.Name = "btApply";
             this.btApply.Size = new System.Drawing.Size(91, 37);
             this.btApply.TabIndex = 3;
-            this.btApply.Text = "Apply";
+            this.btApply.Text = Loc.String(52);
             this.btApply.UseVisualStyleBackColor = true;
             this.btApply.Click += new System.EventHandler(this.btApply_Click);
             // 
